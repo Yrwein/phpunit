@@ -43,6 +43,16 @@
  * @since      File available since Release 3.0.0
  */
 
+if (!class_exists('Symfony\\Component\\Yaml\\Escaper') &&
+    stream_resolve_include_path('Symfony/Component/Yaml/Escaper.php')) {
+    require_once 'Symfony/Component/Yaml/Escaper.php';
+}
+
+if (!class_exists('Symfony\\Component\\Yaml\\Inline') &&
+    stream_resolve_include_path('Symfony/Component/Yaml/Inline.php')) {
+    require_once 'Symfony/Component/Yaml/Inline.php';
+}
+
 if (!class_exists('Symfony\\Component\\Yaml\\Dumper') &&
     stream_resolve_include_path('Symfony/Component/Yaml/Dumper.php')) {
     require_once 'Symfony/Component/Yaml/Dumper.php';
